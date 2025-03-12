@@ -282,7 +282,7 @@
 <body>
     <div class="header">
         <div class="header-top">
-            <span id="noneBalance">0 نون</span>
+            <span id="noneBalance">0 NONE</span>
             <div class="actions">
                 <button class="action-btn" onclick="window.open('https://x.com/NoneMiner', '_blank')"><i class="fab fa-twitter"></i></button>
                 <button class="action-btn" onclick="window.open('https://t.me/NoneMiners', '_blank')"><i class="fab fa-telegram-plane"></i></button>
@@ -297,7 +297,7 @@
             </div>
             <div class="miner-gif"></div>
             <div class="miner-prompt" id="minerPrompt"></div>
-            <div class="reward-none" id="rewardNone" onclick="claimReferralReward()">المكافأة: 0 نون</div>
+            <div class="reward-none" id="rewardNone" onclick="claimReferralReward()">المكافأة: 0 NONE</div>
         </div>
     </div>
     <div class="container">
@@ -311,7 +311,7 @@
         <div class="section" id="joinSection">
             <div class="section-title" id="joinTitle">الانضمام إلى الشبكة</div>
             <div class="button-group">
-                <button id="joinWithReferrerButton">انضم (10 بون)</button>
+                <button id="joinWithReferrerButton">انضم (10 BONE)</button>
             </div>
             <div class="input-group">
                 <input type="text" id="referrerInput" placeholder="عنوان المرجع">
@@ -320,18 +320,18 @@
         <div class="section" id="nodeSection">
             <div class="section-title" id="nodeTitle">كن عقدة</div>
             <div class="button-group" id="nodeButtonGroup">
-                <button id="becomeNodeButton">عقدة (1000 بون)</button>
+                <button id="becomeNodeButton">عقدة (1000 BONE)</button>
             </div>
         </div>
         <div class="section">
-            <div class="section-title" id="stakeTitle">رهن نون</div>
+            <div class="section-title" id="stakeTitle">رهن NONE</div>
             <div class="button-group">
                 <button id="stakeButton">رهن</button>
                 <button id="withdrawStakeButton">سحب</button>
             </div>
             <div class="input-group">
                 <input type="text" id="nodeIdInput" placeholder="معرف العقدة (1-2100)">
-                <input type="text" id="stakeAmountInput" placeholder="الكمية (الحد الأدنى 10000 نون)">
+                <input type="text" id="stakeAmountInput" placeholder="الكمية (الحد الأدنى 10000 NONE)">
             </div>
             <div class="percentage-buttons">
                 <button class="percentage-btn" onclick="setStakePercentage(25)">25%</button>
@@ -378,25 +378,25 @@
         ];
 
         const prompts = [
-            "⛏️ يا عامل المنجم، جهز فأسك! لنحفر بعض نون!",
-            "💎 هل وجدت نون بعد؟ استمر في التعدين، يا بطل!",
-            "⚡ قم بتشغيل جهازك! نون في انتظارك!",
-            "🚀 انطلق إلى مناجم نون! هيا هيا!",
-            "🔥 سلسلة ساخنة! احفر أعمق للمزيد من نون!",
+            "⛏️ يا عامل المنجم، جهز فأسك! لنحفر بعض NONE!",
+            "💎 هل وجدت NONE بعد؟ استمر في التعدين، يا بطل!",
+            "⚡ قم بتشغيل جهازك! NONE في انتظارك!",
+            "🚀 انطلق إلى مناجم NONE! هيا هيا!",
+            "🔥 سلسلة ساخنة! احفر أعمق للمزيد من NONE!",
             "💰 وقت الجائزة الكبرى! ارهن أكثر لتربح كثيرًا!",
-            "⛏️ هز تلك الفأس! نون يناديك!",
-            "🌟 تألق بقوة، يا عامل المنجم! نون هو جوهرتك!",
-            "⚙️ استعد! مناجم نون مفتوحة!",
-            "🎉 احتفل في المناجم! احفر لنون الآن!"
+            "⛏️ هز تلك الفأس! NONE يناديك!",
+            "🌟 تألق بقوة، يا عامل المنجم! NONE هو جوهرتك!",
+            "⚙️ استعد! مناجم NONE مفتوحة!",
+            "🎉 احتفل في المناجم! احفر لـ NONE الآن!"
         ];
         let promptIndex = 0;
 
         const claimMessages = [
-            "يا عامل المنجم! ادعُ صديقًا لينضم إلى حفلة نون واستلم هذا الكنز! 🚀",
-            "نون الخاص بك في الانتظار! ادعُ صديقًا إلى المناجم واستلمه! ⛏️",
-            "واو، نون مجاني! اجلب صديقًا للانضمام وهو لك، يا حافر! 💎",
-            "تنبيه الجائزة الكبرى! اجلب صديقًا لتفتح كنز نون هذا! 💰",
-            "المزيد من العمال، المزيد من نون! ادعُ شخصًا واستلم مكافأتك! ⚡"
+            "يا عامل المنجم! ادعُ صديقًا لينضم إلى حفلة NONE واستلم هذا الكنز! 🚀",
+            "NONE الخاص بك في الانتظار! ادعُ صديقًا إلى المناجم واستلمه! ⛏️",
+            "واو، NONE مجاني! اجلب صديقًا للانضمام وهو لك، يا حافر! 💎",
+            "تنبيه الجائزة الكبرى! اجلب صديقًا لتفتح كنز NONE هذا! 💰",
+            "المزيد من العمال، المزيد من NONE! ادعُ شخصًا واستلم مكافأتك! ⚡"
         ];
 
         async function testImageLoad(url) {
@@ -424,15 +424,15 @@
 
         async function updateRewardNone() {
             if (!web3 || !contract || !accounts) {
-                document.getElementById('rewardNone').innerText = 'المكافأة: 0 نون';
+                document.getElementById('rewardNone').innerText = 'المكافأة: 0 NONE';
                 return;
             }
             try {
                 const referralInfo = await contract.methods.getReferralInfo(accounts[0]).call();
                 const reward = web3.utils.fromWei(referralInfo[1], 'ether');
-                document.getElementById('rewardNone').innerText = `المكافأة: ${parseFloat(reward).toFixed(2)} نون`;
+                document.getElementById('rewardNone').innerText = `المكافأة: ${parseFloat(reward).toFixed(2)} NONE`;
             } catch (error) {
-                document.getElementById('rewardNone').innerText = 'المكافأة: 0 نون';
+                document.getElementById('rewardNone').innerText = 'المكافأة: 0 NONE';
             }
         }
 
@@ -529,7 +529,7 @@
                 const amount = web3.utils.fromWei(stakeInfo[0], 'ether');
                 const nodeId = stakeInfo[1];
                 if (parseInt(amount) > 0) {
-                    document.getElementById('myStakes').innerText = `رهاناتي: العقدة ${nodeId}: ${parseFloat(amount).toFixed(2)} نون`;
+                    document.getElementById('myStakes').innerText = `رهاناتي: العقدة ${nodeId}: ${parseFloat(amount).toFixed(2)} NONE`;
                 } else {
                     document.getElementById('myStakes').innerText = 'رهاناتي: لا شيء';
                 }
@@ -615,7 +615,7 @@
                     joinSection.innerHTML = `
                         <div class="section-title" id="joinTitle">الانضمام إلى الشبكة</div>
                         <div class="button-group">
-                            <button id="joinWithReferrerButton">انضم (10 بون)</button>
+                            <button id="joinWithReferrerButton">انضم (10 BONE)</button>
                         </div>
                         <div class="input-group">
                             <input type="text" id="referrerInput" placeholder="عنوان المرجع">
@@ -644,7 +644,7 @@
                     nodeSection.innerHTML = `
                         <div class="section-title" id="nodeTitle">كن عقدة</div>
                         <div class="button-group" id="nodeButtonGroup">
-                            <button id="becomeNodeButton">عقدة (1000 بون)</button>
+                            <button id="becomeNodeButton">عقدة (1000 BONE)</button>
                         </div>
                         <div class="info-panel">أنت لست عقدة بعد!</div>
                     `;
@@ -666,7 +666,7 @@
                 return;
             }
             try {
-                showModal('الانضمام إلى الشبكة بـ 10 بون... 💎');
+                showModal('الانضمام إلى الشبكة بـ 10 BONE... 💎');
                 await contract.methods.joinWithReferrer(referrer).send({ from: accounts[0], value: web3.utils.toWei("10", "ether") });
                 showModal('تم الانضمام بنجاح! ابدأ التعدين! 🚀');
                 updateNoneBalance();
@@ -683,7 +683,7 @@
                 return;
             }
             try {
-                showModal('الترقية إلى عقدة بـ 1000 بون... ⚙️');
+                showModal('الترقية إلى عقدة بـ 1000 BONE... ⚙️');
                 await contract.methods.becomeNode().send({ from: accounts[0], value: web3.utils.toWei("1000", "ether") });
                 showModal('تم الترقية إلى عقدة! أنت رئيس التعدين! 🎉');
                 updateNodeSection();
@@ -696,7 +696,7 @@
         async function updateNoneBalance() {
             if (!web3 || !contract || !accounts) return;
             const balance = await contract.methods.balanceOf(accounts[0]).call();
-            document.getElementById('noneBalance').innerText = `${web3.utils.fromWei(balance, "ether")} نون`;
+            document.getElementById('noneBalance').innerText = `${web3.utils.fromWei(balance, "ether")} NONE`;
         }
 
         function setStakePercentage(percentage) {
@@ -726,9 +726,9 @@
             const nodeId = document.getElementById("nodeIdInput").value;
             const amount = document.getElementById("stakeAmountInput").value;
             try {
-                showModal(`رهن ${amount} نون للعقدة ${nodeId}... ⛏️`);
+                showModal(`رهن ${amount} NONE للعقدة ${nodeId}... ⛏️`);
                 await contract.methods.stakeToNode(nodeId, web3.utils.toWei(amount, "ether")).send({ from: accounts[0] });
-                showModal(`تم رهن ${amount} نون للعقدة ${nodeId}! 💰`);
+                showModal(`تم رهن ${amount} NONE للعقدة ${nodeId}! 💰`);
                 updateNoneBalance();
                 updateMyStakes();
             } catch (error) {
