@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoneToken DApp</title>
+    <title>تطبيق نون توكن اللامركزي</title>
     <link rel="icon" type="image/png" href="images/none.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -221,7 +221,7 @@
             border-radius: 10px;
             margin-top: 10px;
             font-size: 0.8em;
-            color: #fff; /* 确保文字颜色一致 */
+            color: #fff;
         }
         .status {
             margin-top: 10px;
@@ -282,56 +282,56 @@
 <body>
     <div class="header">
         <div class="header-top">
-            <span id="noneBalance">0 NONE</span>
+            <span id="noneBalance">0 نون</span>
             <div class="actions">
                 <button class="action-btn" onclick="window.open('https://x.com/NoneMiner', '_blank')"><i class="fab fa-twitter"></i></button>
                 <button class="action-btn" onclick="window.open('https://t.me/NoneMiners', '_blank')"><i class="fab fa-telegram-plane"></i></button>
             </div>
         </div>
         <div class="header-content">
-            <h1 id="title">NoneToken DApp</h1>
+            <h1 id="title">تطبيق نون توكن اللامركزي</h1>
             <div class="profile-section">
-                <img class="avatar" id="userAvatar" src="images/default-avatar.png" alt="Avatar">
-                <span class="nickname" id="userNickname">Woof Wallet</span>
+                <img class="avatar" id="userAvatar" src="images/default-avatar.png" alt="الصورة الرمزية">
+                <span class="nickname" id="userNickname">محفظة ووف</span>
                 <img class="v-icon" id="vIcon" src="" alt="" style="display: none;">
             </div>
             <div class="miner-gif"></div>
             <div class="miner-prompt" id="minerPrompt"></div>
-            <div class="reward-none" id="rewardNone" onclick="claimReferralReward()">Reward: 0 NONE</div>
+            <div class="reward-none" id="rewardNone" onclick="claimReferralReward()">المكافأة: 0 نون</div>
         </div>
     </div>
     <div class="container">
         <div class="section">
-            <div class="section-title" id="connectTitle">Connect Wallet</div>
+            <div class="section-title" id="connectTitle">ربط المحفظة</div>
             <div class="button-group">
-                <button id="connectButton">Connect MetaMask</button>
+                <button id="connectButton">ربط ميتاماسك</button>
             </div>
-            <div class="info-panel">Wallet: <span id="walletAddress">Not connected</span></div>
+            <div class="info-panel">المحفظة: <span id="walletAddress">غير متصل</span></div>
         </div>
         <div class="section" id="joinSection">
-            <div class="section-title" id="joinTitle">Join Network</div>
+            <div class="section-title" id="joinTitle">الانضمام إلى الشبكة</div>
             <div class="button-group">
-                <button id="joinWithReferrerButton">Join (10 BONE)</button>
+                <button id="joinWithReferrerButton">انضم (10 بون)</button>
             </div>
             <div class="input-group">
-                <input type="text" id="referrerInput" placeholder="Referrer Address">
+                <input type="text" id="referrerInput" placeholder="عنوان المرجع">
             </div>
         </div>
         <div class="section" id="nodeSection">
-            <div class="section-title" id="nodeTitle">Become a Node</div>
+            <div class="section-title" id="nodeTitle">كن عقدة</div>
             <div class="button-group" id="nodeButtonGroup">
-                <button id="becomeNodeButton">Node (1000 BONE)</button>
+                <button id="becomeNodeButton">عقدة (1000 بون)</button>
             </div>
         </div>
         <div class="section">
-            <div class="section-title" id="stakeTitle">Stake NONE</div>
+            <div class="section-title" id="stakeTitle">رهن نون</div>
             <div class="button-group">
-                <button id="stakeButton">Stake</button>
-                <button id="withdrawStakeButton">Withdraw</button>
+                <button id="stakeButton">رهن</button>
+                <button id="withdrawStakeButton">سحب</button>
             </div>
             <div class="input-group">
-                <input type="text" id="nodeIdInput" placeholder="Node ID (1-2100)">
-                <input type="text" id="stakeAmountInput" placeholder="Amount (Min 10000 NONE)">
+                <input type="text" id="nodeIdInput" placeholder="معرف العقدة (1-2100)">
+                <input type="text" id="stakeAmountInput" placeholder="الكمية (الحد الأدنى 10000 نون)">
             </div>
             <div class="percentage-buttons">
                 <button class="percentage-btn" onclick="setStakePercentage(25)">25%</button>
@@ -339,14 +339,14 @@
                 <button class="percentage-btn" onclick="setStakePercentage(75)">75%</button>
                 <button class="percentage-btn" onclick="setStakePercentage(100)">100%</button>
             </div>
-            <div class="info-panel" id="myStakes">My Stakes: None</div>
+            <div class="info-panel" id="myStakes">رهاناتي: لا شيء</div>
         </div>
     </div>
-    <footer id="footer">Powered by Shibarium © 2025</footer>
+    <footer id="footer">مدعوم من شبكة شيباريوم © 2025</footer>
     <div id="modal" class="modal">
         <div class="modal-content">
             <p id="modalMessage"></p>
-            <button onclick="closeModal()">OK</button>
+            <button onclick="closeModal()">موافق</button>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.7.0/dist/web3.min.js"></script>
@@ -360,8 +360,8 @@
         const PUNKPET_ABI = [{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"getUserPets","outputs":[{"internalType":"uint256[]","name":"petIds","type":"uint256[]"},{"internalType":"uint256[]","name":"petTypes","type":"uint256[]"},{"internalType":"uint256[]","name":"nextFeedTimes","type":"uint256[]"},{"internalType":"uint256[]","name":"feedCounts","type":"uint256[]"}],"stateMutability":"view","type":"function"}];
         const shibariumMainnet = {
             chainId: 109,
-            chainName: 'Shibarium',
-            nativeCurrency: { name: 'BONE', symbol: 'BONE', decimals: 18 },
+            chainName: 'شيباريوم',
+            nativeCurrency: { name: 'بون', symbol: 'BONE', decimals: 18 },
             rpcUrls: ['https://www.shibrpc.com'],
             blockExplorerUrls: ['https://shibariumscan.io']
         };
@@ -378,25 +378,25 @@
         ];
 
         const prompts = [
-            "⛏️ Miner, ready your pickaxe! Let's dig some NONE!",
-            "💎 Found any NONE yet? Keep mining, champ!",
-            "⚡ Power up your rig! NONE awaits you!",
-            "🚀 Blast off to the NONE mines! Go go go!",
-            "🔥 Hot streak! Dig deeper for more NONE!",
-            "💰 Jackpot time! Stake more to win big!",
-            "⛏️ Swing that pickaxe! NONE is calling!",
-            "🌟 Shine bright, miner! NONE is your gem!",
-            "⚙️ Gear up! The NONE mines are open!",
-            "🎉 Party in the mines! Dig for NONE now!"
+            "⛏️ يا عامل المنجم، جهز فأسك! لنحفر بعض نون!",
+            "💎 هل وجدت نون بعد؟ استمر في التعدين، يا بطل!",
+            "⚡ قم بتشغيل جهازك! نون في انتظارك!",
+            "🚀 انطلق إلى مناجم نون! هيا هيا!",
+            "🔥 سلسلة ساخنة! احفر أعمق للمزيد من نون!",
+            "💰 وقت الجائزة الكبرى! ارهن أكثر لتربح كثيرًا!",
+            "⛏️ هز تلك الفأس! نون يناديك!",
+            "🌟 تألق بقوة، يا عامل المنجم! نون هو جوهرتك!",
+            "⚙️ استعد! مناجم نون مفتوحة!",
+            "🎉 احتفل في المناجم! احفر لنون الآن!"
         ];
         let promptIndex = 0;
 
         const claimMessages = [
-            "Hey miner! Invite a buddy to join the NONE party and claim this loot! 🚀",
-            "Your NONE is waiting! Call a friend to the mines and snag it! ⛏️",
-            "Whoa, free NONE! Get a pal to join and it’s yours, digger! 💎",
-            "Jackpot alert! Bring a friend aboard to unlock this NONE treasure! 💰",
-            "More miners, more NONE! Invite someone and grab your reward! ⚡"
+            "يا عامل المنجم! ادعُ صديقًا لينضم إلى حفلة نون واستلم هذا الكنز! 🚀",
+            "نون الخاص بك في الانتظار! ادعُ صديقًا إلى المناجم واستلمه! ⛏️",
+            "واو، نون مجاني! اجلب صديقًا للانضمام وهو لك، يا حافر! 💎",
+            "تنبيه الجائزة الكبرى! اجلب صديقًا لتفتح كنز نون هذا! 💰",
+            "المزيد من العمال، المزيد من نون! ادعُ شخصًا واستلم مكافأتك! ⚡"
         ];
 
         async function testImageLoad(url) {
@@ -424,21 +424,21 @@
 
         async function updateRewardNone() {
             if (!web3 || !contract || !accounts) {
-                document.getElementById('rewardNone').innerText = 'Reward: 0 NONE';
+                document.getElementById('rewardNone').innerText = 'المكافأة: 0 نون';
                 return;
             }
             try {
                 const referralInfo = await contract.methods.getReferralInfo(accounts[0]).call();
                 const reward = web3.utils.fromWei(referralInfo[1], 'ether');
-                document.getElementById('rewardNone').innerText = `Reward: ${parseFloat(reward).toFixed(2)} NONE`;
+                document.getElementById('rewardNone').innerText = `المكافأة: ${parseFloat(reward).toFixed(2)} نون`;
             } catch (error) {
-                document.getElementById('rewardNone').innerText = 'Reward: 0 NONE';
+                document.getElementById('rewardNone').innerText = 'المكافأة: 0 نون';
             }
         }
 
         async function updateUserInfo(address) {
             if (!web3 || !address) {
-                document.getElementById('userNickname').innerText = 'Woof Wallet';
+                document.getElementById('userNickname').innerText = 'محفظة ووف';
                 document.getElementById('userAvatar').src = 'images/default-avatar.png';
                 document.getElementById('vIcon').style.display = 'none';
                 return;
@@ -521,7 +521,7 @@
 
         async function updateMyStakes() {
             if (!web3 || !contract || !accounts) {
-                document.getElementById('myStakes').innerText = 'My Stakes: None';
+                document.getElementById('myStakes').innerText = 'رهاناتي: لا شيء';
                 return;
             }
             try {
@@ -529,18 +529,18 @@
                 const amount = web3.utils.fromWei(stakeInfo[0], 'ether');
                 const nodeId = stakeInfo[1];
                 if (parseInt(amount) > 0) {
-                    document.getElementById('myStakes').innerText = `My Stakes: Node ${nodeId}: ${parseFloat(amount).toFixed(2)} NONE`;
+                    document.getElementById('myStakes').innerText = `رهاناتي: العقدة ${nodeId}: ${parseFloat(amount).toFixed(2)} نون`;
                 } else {
-                    document.getElementById('myStakes').innerText = 'My Stakes: None';
+                    document.getElementById('myStakes').innerText = 'رهاناتي: لا شيء';
                 }
             } catch (error) {
-                document.getElementById('myStakes').innerText = 'My Stakes: None';
+                document.getElementById('myStakes').innerText = 'رهاناتي: لا شيء';
             }
         }
 
         function claimReferralReward() {
             if (!web3 || !contract || !accounts) {
-                showModal('Connect your wallet first, miner! 🔧');
+                showModal('قم بربط محفظتك أولاً، يا عامل المنجم! 🔧');
                 return;
             }
             const randomMsg = claimMessages[Math.floor(Math.random() * claimMessages.length)];
@@ -555,14 +555,14 @@
             const connectButton = document.getElementById('connectButton');
             try {
                 if (!window.ethereum) {
-                    showModal('No wallet detected. Please install <a href="https://metamask.io" target="_blank">MetaMask</a> and run via a local server (e.g., "npx serve").');
+                    showModal('لم يتم اكتشاف محفظة. يرجى تثبيت <a href="https://metamask.io" target="_blank">ميتاماسك</a> وتشغيله عبر خادم محلي (مثل "npx serve").');
                     return;
                 }
                 connectButton.classList.add('loading');
                 web3 = new Web3(window.ethereum);
                 accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
                 if (!accounts.length) {
-                    showModal('Please unlock your wallet or connect it.');
+                    showModal('يرجى فتح محفظتك أو ربطها.');
                     return;
                 }
                 const chainId = await web3.eth.getChainId();
@@ -579,14 +579,14 @@
                                 params: [shibariumMainnet]
                             });
                         } else {
-                            showModal('Failed to switch network. Please add Shibarium manually.');
+                            showModal('فشل في تبديل الشبكة. يرجى إضافة شيباريوم يدويًا.');
                             return;
                         }
                     }
                 }
                 document.getElementById('walletAddress').innerText = `${accounts[0].slice(0, 6)}...${accounts[0].slice(-4)}`;
                 contract = new web3.eth.Contract(contractABI, contractAddress);
-                showModal('Connected to Shibarium successfully! 🎉');
+                showModal('تم الاتصال بشبكة شيباريوم بنجاح! 🎉');
                 updateNoneBalance();
                 updateJoinSection();
                 updateNodeSection();
@@ -594,7 +594,7 @@
                 updateUserInfo(accounts[0]);
                 updateMyStakes();
             } catch (error) {
-                showModal(`Connection failed: ${error.message}`);
+                showModal(`فشل الاتصال: ${error.message}`);
             } finally {
                 connectButton.classList.remove('loading');
             }
@@ -608,23 +608,23 @@
                 const joinSection = document.getElementById('joinSection');
                 if (hasPaidBone) {
                     joinSection.innerHTML = `
-                        <div class="section-title" id="joinTitle">Join Network</div>
-                        <div class="info-panel">You have already joined the network.</div>
+                        <div class="section-title" id="joinTitle">الانضمام إلى الشبكة</div>
+                        <div class="info-panel">لقد انضممت إلى الشبكة بالفعل.</div>
                     `;
                 } else {
                     joinSection.innerHTML = `
-                        <div class="section-title" id="joinTitle">Join Network</div>
+                        <div class="section-title" id="joinTitle">الانضمام إلى الشبكة</div>
                         <div class="button-group">
-                            <button id="joinWithReferrerButton">Join (10 BONE)</button>
+                            <button id="joinWithReferrerButton">انضم (10 بون)</button>
                         </div>
                         <div class="input-group">
-                            <input type="text" id="referrerInput" placeholder="Referrer Address">
+                            <input type="text" id="referrerInput" placeholder="عنوان المرجع">
                         </div>
                     `;
                     document.getElementById('joinWithReferrerButton').addEventListener('click', joinWithReferrer);
                 }
             } catch (error) {
-                showModal(`Failed to check join status: ${error.message}`);
+                showModal(`فشل في التحقق من حالة الانضمام: ${error.message}`);
             }
         }
 
@@ -637,71 +637,71 @@
                 if (isNode) {
                     const nodeId = await contract.methods.getUserNodeId(accounts[0]).call();
                     nodeSection.innerHTML = `
-                        <div class="section-title" id="nodeTitle">Become a Node</div>
-                        <div class="info-panel">You are a node! Your Node ID: ${nodeId}</div>
+                        <div class="section-title" id="nodeTitle">كن عقدة</div>
+                        <div class="info-panel">أنت عقدة! معرف عقدتك: ${nodeId}</div>
                     `;
                 } else {
                     nodeSection.innerHTML = `
-                        <div class="section-title" id="nodeTitle">Become a Node</div>
+                        <div class="section-title" id="nodeTitle">كن عقدة</div>
                         <div class="button-group" id="nodeButtonGroup">
-                            <button id="becomeNodeButton">Node (1000 BONE)</button>
+                            <button id="becomeNodeButton">عقدة (1000 بون)</button>
                         </div>
-                        <div class="info-panel">You are not a node yet!</div>
+                        <div class="info-panel">أنت لست عقدة بعد!</div>
                     `;
                     document.getElementById('becomeNodeButton').addEventListener('click', becomeNode);
                 }
             } catch (error) {
-                showModal(`Failed to check node status: ${error.message}`);
+                showModal(`فشل في التحقق من حالة العقدة: ${error.message}`);
             }
         }
 
         async function joinWithReferrer() {
             if (!web3 || !contract || !accounts) {
-                showModal('Please connect your wallet first! 🔧');
+                showModal('يرجى ربط محفظتك أولاً! 🔧');
                 return;
             }
             const referrer = document.getElementById("referrerInput").value;
             if (!referrer) {
-                showModal('Referrer address is required!');
+                showModal('عنوان المرجع مطلوب!');
                 return;
             }
             try {
-                showModal('Joining network with 10 BONE... 💎');
+                showModal('الانضمام إلى الشبكة بـ 10 بون... 💎');
                 await contract.methods.joinWithReferrer(referrer).send({ from: accounts[0], value: web3.utils.toWei("10", "ether") });
-                showModal('Joined successfully! Start mining! 🚀');
+                showModal('تم الانضمام بنجاح! ابدأ التعدين! 🚀');
                 updateNoneBalance();
                 updateJoinSection();
                 updateNodeSection();
             } catch (error) {
-                showModal('Join failed: ' + error.message);
+                showModal('فشل الانضمام: ' + error.message);
             }
         }
 
         async function becomeNode() {
             if (!web3 || !contract || !accounts) {
-                showModal('Please connect your wallet first! 🔧');
+                showModal('يرجى ربط محفظتك أولاً! 🔧');
                 return;
             }
             try {
-                showModal('Upgrading to node with 1000 BONE... ⚙️');
+                showModal('الترقية إلى عقدة بـ 1000 بون... ⚙️');
                 await contract.methods.becomeNode().send({ from: accounts[0], value: web3.utils.toWei("1000", "ether") });
-                showModal('Upgraded to node! You\'re a mining boss! 🎉');
+                showModal('تم الترقية إلى عقدة! أنت رئيس التعدين! 🎉');
                 updateNodeSection();
                 updateNoneBalance();
             } catch (error) {
-                showModal('Node upgrade failed: ' + error.message);
+                showModal('فشل ترقية العقدة: ' + error.message);
             }
         }
 
         async function updateNoneBalance() {
             if (!web3 || !contract || !accounts) return;
             const balance = await contract.methods.balanceOf(accounts[0]).call();
-            document.getElementById('noneBalance').innerText = `${web3.utils.fromWei(balance, "ether")} NONE`;
+            document.getElementById('noneBalance').innerText = `${web3.utils.fromWei(balance, "ether")} نون`;
         }
 
         function setStakePercentage(percentage) {
             if (!web3 || !contract || !accounts) {
-                showModal('Please connect your wallet first! 🔧');
+                showModal('يرجى ربط محفظتك أولاً! 🔧');
                 return;
             }
             updateNoneBalance().then(() => {
@@ -720,35 +720,35 @@
 
         async function stakeToNode() {
             if (!web3 || !contract || !accounts) {
-                showModal('Please connect your wallet first! 🔧');
+                showModal('يرجى ربط محفظتك أولاً! 🔧');
                 return;
             }
             const nodeId = document.getElementById("nodeIdInput").value;
             const amount = document.getElementById("stakeAmountInput").value;
             try {
-                showModal(`Staking ${amount} NONE to Node ${nodeId}... ⛏️`);
+                showModal(`رهن ${amount} نون للعقدة ${nodeId}... ⛏️`);
                 await contract.methods.stakeToNode(nodeId, web3.utils.toWei(amount, "ether")).send({ from: accounts[0] });
-                showModal(`Staked ${amount} NONE to Node ${nodeId}! 💰`);
+                showModal(`تم رهن ${amount} نون للعقدة ${nodeId}! 💰`);
                 updateNoneBalance();
                 updateMyStakes();
             } catch (error) {
-                showModal('Staking failed: ' + error.message);
+                showModal('فشل الرهن: ' + error.message);
             }
         }
 
         async function withdrawStake() {
             if (!web3 || !contract || !accounts) {
-                showModal('Please connect your wallet first! 🔧');
+                showModal('يرجى ربط محفظتك أولاً! 🔧');
                 return;
             }
             try {
-                showModal('Withdrawing your stake... 💸');
+                showModal('سحب رهانك... 💸');
                 await contract.methods.withdrawStake().send({ from: accounts[0] });
-                showModal('Stake withdrawn with rewards! 🎊');
+                showModal('تم سحب الرهان مع المكافآت! 🎊');
                 updateNoneBalance();
                 updateMyStakes();
             } catch (error) {
-                showModal('Withdrawal failed: ' + error.message);
+                showModal('فشل السحب: ' + error.message);
             }
         }
 
@@ -760,11 +760,11 @@
 
         window.ethereum?.on('chainChanged', (chainId) => {
             if (parseInt(chainId, 16) !== 109) {
-                showModal('Switched to wrong network. Please reconnect to Shibarium.');
+                showModal('تم التبديل إلى شبكة خاطئة. يرجى إعادة الاتصال بشيباريوم.');
                 web3 = null;
                 contract = null;
                 accounts = null;
-                document.getElementById('walletAddress').innerText = 'Not connected';
+                document.getElementById('walletAddress').innerText = 'غير متصل';
             } else {
                 connectWallet();
             }
@@ -774,19 +774,19 @@
             if (newAccounts.length) {
                 connectWallet();
             } else {
-                showModal('Wallet disconnected. Please reconnect.');
+                showModal('تم قطع اتصال المحفظة. يرجى إعادة الاتصال.');
                 web3 = null;
                 contract = null;
                 accounts = null;
-                document.getElementById('walletAddress').innerText = 'Not connected';
+                document.getElementById('walletAddress').innerText = 'غير متصل';
             }
         });
 
         window.addEventListener('load', () => {
             if (!window.location.protocol.startsWith('http')) {
-                showModal('Please run this page via a local server (e.g., "npx serve") to connect MetaMask.');
+                showModal('يرجى تشغيل هذه الصفحة عبر خادم محلي (مثل "npx serve") لربط ميتاماسك.');
             } else if (!window.ethereum) {
-                showModal('No wallet detected. Please install <a href="https://metamask.io" target="_blank">MetaMask</a>.');
+                showModal('لم يتم اكتشاف محفظة. يرجى تثبيت <a href="https://metamask.io" target="_blank">ميتاماسك</a>.');
             }
         });
     </script>
